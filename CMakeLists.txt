@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.9)
 
 project(bitcoin-mutator VERSION 1.0.0 DESCRIPTION "Mutators for Bitcoin Core")
 find_package(LLVM REQUIRED CONFIG)
-include_directories(${LLVM_INCLUDE_DIRS})
+include_directories(./clang-tidy)
+include_directories(/usr/lib/llvm-16/include)
 
 include(GNUInstallDirs)
 

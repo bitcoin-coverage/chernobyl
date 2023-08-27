@@ -1,0 +1,8 @@
+#include "../clang-tidy/ClangTidy.h"
+#include "../clang-tidy/ClangTidyDiagnosticConsumer.h"
+#include "../clang-tidy/modernize/IntegralLiteralExpressionMatcher.h"
+#include "../clang-tidy/utils/TransformerClangTidyCheck.h"
+#include "clang/ASTMatchers/ASTMatchFinder.h"
+#include "clang/ASTMatchers/ASTMatchers.h"
+#include "clang/Tooling/Transformer/Stencil.h"
+#include "clang/Tooling/Transformer/Transformer.h"

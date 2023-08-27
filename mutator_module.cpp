@@ -9,7 +9,7 @@
 #include "checks/or_to_and.h"
 #include "checks/reverse_if_cond.h"
 #include "checks/true_to_false.h"
-#include "clang-tidy/ClangTidy.h"
+#include "../clang-tidy/ClangTidy.h"
 #include "clang-tidy/ClangTidyModule.h"
 #include "clang-tidy/ClangTidyModuleRegistry.h"
 

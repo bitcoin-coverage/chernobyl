@@ -1,13 +1,6 @@
 #pragma once
 
-#include <iostream>
-
-#include "clang-tidy/ClangTidy.h"
-#include "clang-tidy/utils/TransformerClangTidyCheck.h"
-#include "clang/ASTMatchers/ASTMatchFinder.h"
-#include "clang/Tooling/Transformer/Stencil.h"
-#include "clang/Tooling/Transformer/Transformer.h"
-
+#include "common.h"
 namespace clang::tidy::mutator {
 
     auto binaryOperatorMatcher =

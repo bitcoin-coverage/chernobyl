@@ -1,10 +1,6 @@
 #pragma once
 
-#include "clang-tidy/ClangTidy.h"
-#include "clang-tidy/utils/TransformerClangTidyCheck.h"
-#include "clang/ASTMatchers/ASTMatchFinder.h"
-#include "clang/Tooling/Transformer/Stencil.h"
-#include "clang/Tooling/Transformer/Transformer.h"
+#include "common.h"
 
 using namespace clang::transformer;
 using namespace clang::tidy::utils;
@@ -15,10 +11,7 @@ namespace clang::tidy::mutator {
        public:
         MutatorFalseToTrue(StringRef Name, ClangTidyContext *Context)
             : TransformerClangTidyCheck(
-                  makeRule(
-                        cxxBoolLiteral(equals(false)).bind("bool"),
-                        changeTo(cat("true")),
-                        cat("false mutated to true")),
+                  makeRule(cxxBoolLiteral(equals(false)).bind("bool"), changeTo(cat("true")), cat("false mutated to true")),
                   Name,
                   Context) { }
     };
