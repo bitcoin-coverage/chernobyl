@@ -12,7 +12,7 @@ namespace clang::tidy::mutator {
             : TransformerClangTidyCheck(
                   makeRule(
                       binaryOperator(hasOperatorName("<="), hasLHS(expr().bind("lhs")), hasRHS(expr().bind("rhs"))),
-                      changeTo(cat(node("lhs"), " <= ", node("rhs"))),
+                      changeTo(cat(node("lhs"), " >= ", node("rhs"))),
                       cat("<= mutated to >=")),
                   Name,
                   Context) { }
