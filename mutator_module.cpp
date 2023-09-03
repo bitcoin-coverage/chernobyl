@@ -7,7 +7,6 @@
 #include "checks/less_to_greater.h"
 #include "checks/neq_to_eq.h"
 #include "checks/or_to_and.h"
-#include "checks/reverse_if_cond.h"
 #include "checks/true_to_false.h"
 #include "../clang-tidy/ClangTidy.h"
 #include "clang-tidy/ClangTidyModule.h"
@@ -20,7 +19,6 @@ namespace clang::tidy {
             void addCheckFactories(ClangTidyCheckFactories &CheckFactories) override {
                 CheckFactories.registerCheck<MutatorAndToOr>("mutator-and-to-or");
                 CheckFactories.registerCheck<MutatorOrToAnd>("mutator-or-to-and");
-                CheckFactories.registerCheck<MutatorReverseIfCond>("mutator-reverse-if-cond");
                 CheckFactories.registerCheck<MutatorEqToNeq>("mutator-eq-to-neq");
                 CheckFactories.registerCheck<MutatorNeqToEq>("mutator-neq-to-eq");
                 CheckFactories.registerCheck<MutatorTrueToFalse>("mutator-true-to-false");
